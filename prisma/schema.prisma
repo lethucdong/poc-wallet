@@ -1,0 +1,24 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Transaction {
+  id              String   @id @default(cuid())
+  type            String
+  amount          Float
+  category        String
+  note            String   @default("")
+  transactionDate DateTime @default(now())
+  createdAt       DateTime @default(now())
+}
+
+model Category {
+  id        String   @id @default(cuid())
+  name      String   @unique
+  createdAt DateTime @default(now())
+}
