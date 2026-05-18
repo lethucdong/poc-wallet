@@ -75,7 +75,7 @@ export function TransactionForm({ onAdded }: Props) {
         <div className="flex gap-2">
           <input
             className="flex-1 rounded-lg border border-gray-200 px-3 py-2 text-sm outline-none focus:border-indigo-400"
-            placeholder='Ví dụ: "ăn sáng 35k", "lương 15 triệu"'
+            placeholder='Ví dụ: "ăn sáng 35k", "lương 5 triệu"'
             value={aiInput}
             onChange={(e) => setAiInput(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && submitAI()}
